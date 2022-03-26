@@ -10,8 +10,34 @@ $(document).ready(function () {
         navigationTooltips: ['HOME', 'ABOUT', 'PRODUCT', 'R&D', 'CUSTOMER'],
         showActiveTooltip: true,
     });
-    // 스크롤 다운
-    
+    var swiper = new Swiper(".page-3-swiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction"
+        },
+        loopAdditionalSlides:5,
+
+        navigation: {
+            nextEl: ".page-3-next",
+            prevEl: ".page-3-prev"
+        }
+    });
+    let $body = $('body');
+    let $page_2 = $('.page-2');
+    let $fp_nav = $('#fp-nav');
+    $(window).bind("mousewheel", function (e) {
+        dark();
+    });
+
+    function dark() {
+        if ($page_2.hasClass('active') && $body.hasClass('dark') != true) {
+            $body.addClass('dark');
+            console.log('darkon');
+        } else if ($page_2.hasClass('active') == false && $body.hasClass('dark')) {
+            $body.removeClass('dark');
+        }
+    }
     $lang = $('.language');
     $lang_list = $('.lang-list');
     $lang.click(function () {
@@ -35,4 +61,5 @@ $(document).ready(function () {
             clickable: true,
         },
     });
+    dark();
 });
