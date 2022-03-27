@@ -10,21 +10,10 @@ $(document).ready(function () {
         navigationTooltips: ['HOME', 'ABOUT', 'PRODUCT', 'R&D', 'CUSTOMER'],
         showActiveTooltip: true,
     });
-    var swiper = new Swiper(".page-3-swiper", {
-        loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction"
-        },
-        loopAdditionalSlides:5,
+    
 
-        navigation: {
-            nextEl: ".page-3-next",
-            prevEl: ".page-3-prev"
-        }
-    });
     let $body = $('body');
-    let $page_2 = $('.page-2');
+    let $page_2 = $('.page2');
     let $fp_nav = $('#fp-nav');
     $(window).bind("mousewheel", function (e) {
         dark();
@@ -49,7 +38,7 @@ $(document).ready(function () {
             })
         }
     });
-    var swiper = new Swiper(".visual-swiper", {
+    var page1_swiper = new Swiper(".page1-swiper", {
         effect: 'fade',
         slidesPerview: 1,
         touchRatio: 0,
@@ -57,8 +46,28 @@ $(document).ready(function () {
             speed: 5000
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".page1-pg",
             clickable: true,
+        },
+    });
+    var page3_swiper = new Swiper(".page3-swiper", {
+        loop: true,
+        pagination: {
+            el: ".page3-pg",
+            type: "fraction"
+        },
+        loopAdditionalSlides: 5,
+
+        navigation: {
+            nextEl: ".page3-next",
+            prevEl: ".page3-prev"
+        }
+    });
+    var page5_swiper = new Swiper(".page5-swiper", {
+        slidesPerView:3,
+        pagination: {
+            el: ".page5-pg",
+            clickable:true,
         },
     });
     dark();
