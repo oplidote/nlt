@@ -437,7 +437,7 @@ body {
     background-color: #444648;
 
 }
-.page-2 .left {
+.left {
     position: relative;
     display: block;
     float: left;
@@ -657,4 +657,65 @@ body {
     height: 13px;
     background:url('../images/section3_prev.png')no-repeat center;
     cursor: pointer;
+}
+.page-4 {
+    background:url('../images/section4_bg.jpeg')no-repeat center;
+    background-size: cover;
+}
+.right {
+    display: flex;
+}
+.rnd-box {
+    position: relative;
+    flex: 1;
+    padding-left: 30px;
+}
+.rnd-box::before {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 100vh;
+    background-color :rgba(255, 255, 255, 0.2);
+}
+.rnd-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 3px;
+    height: 60px;
+    background-color: #fff;
+}
+
+.rnd-box .txt {
+    margin-top: 60px;
+}
+.rnd-box h2 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.rnd-box p {
+    font-size: 17px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 100;
+    margin-bottom: 60px;
+}
+.rnd-box-bt {
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 58px;
+    background:url('../images/section4_arr_btn.png')no-repeat center;
+    cursor: pointer;
+    transition: .3s;
+}
+.rnd-box-bt:hover{
+    background:url('../images/section4_arr_btn_over.png')no-repeat center;
 }
