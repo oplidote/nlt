@@ -13,17 +13,27 @@ $(document).ready(function () {
     
 
     let $body = $('body');
-    let $page_2 = $('.page2');
-    let $fp_nav = $('#fp-nav');
+    let $page2 = $('.page2');
+    let $page1 = $('.page1');
+    let $gotop = $('.gotop');
+
     $(window).bind("mousewheel", function (e) {
         dark();
+        gotop();
     });
-
+    function gotop() {
+        if($page1.hasClass('active')){
+            $gotop.fadeOut(300);
+        }
+        else {
+            $gotop.fadeIn(300);
+        }
+    }
     function dark() {
-        if ($page_2.hasClass('active') && $body.hasClass('dark') != true) {
+        if ($page2.hasClass('active') && $body.hasClass('dark') != true) {
             $body.addClass('dark');
             console.log('darkon');
-        } else if ($page_2.hasClass('active') == false && $body.hasClass('dark')) {
+        } else if ($page2.hasClass('active') == false && $body.hasClass('dark')) {
             $body.removeClass('dark');
         }
     }
@@ -71,4 +81,5 @@ $(document).ready(function () {
         },
     });
     dark();
+    gotop();
 });
