@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    // 변수
-
+    // --------변수 선언-------------
     // 전체메뉴
     let $nav_bg = $('.nav-bg');
     let $nav = $('.nav');
@@ -12,20 +11,32 @@ $(document).ready(function () {
     let $page2 = $('.page2');
     let $page1 = $('.page1');
     let $gotop = $('.gotop');
+    // 상세
+    let $lang = $('.language');
+    let $lang_list = $('.lang-list');
+    // --------------------------------
 
     // 풀페이지
     $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
         menu: '#menu',
-        slidesNavigation: true,
+        slidesNavigation: false,
         scrollHorizontally: true,
         navigation: true,
         navigationPosition: 'right',
         navigationTooltips: ['HOME', 'ABOUT', 'PRODUCT', 'R&D', 'CUSTOMER'],
         showActiveTooltip: true,
+        onLeave: function (anchorLink, index) {
+            // 고탑 기능
+            $gotop.toggleClass('gotop-on', index != 1);
+            // 섹션 2 : 헤더 색상 변경
+            $body.toggleClass('dark', index == 2);
+        },
+        afterLoad: function (anchorLink, index) {
+            this.addClass('page'+ index +'-active');
+        }
     });
 
-    
     // 전체메뉴
     $menu.mouseenter(function () {
         $nav.addClass('nav-on');
@@ -42,38 +53,13 @@ $(document).ready(function () {
         $nav_bg.stop().fadeOut(300);
         $('body').off('scroll touchmove mousewheel');
     });
-    $nav_wrap.mouseleave(function(){
+    $nav_wrap.mouseleave(function () {
         $nav.removeClass('nav-on');
         $nav_bg.stop().fadeOut(300);
         $('body').off('scroll touchmove mousewheel');
     })
 
-    // 마우스 휠 시 작동
-    $(window).bind("mousewheel", function (e) {
-        dark();
-        gotop();
-    });
 
-    // 고탑 기능
-    function gotop() {
-        if ($page1.hasClass('active')) {
-            $gotop.fadeOut(300);
-        } else {
-            $gotop.fadeIn(300);
-        }
-    }
-
-    // 헤더영역 2페이지 시 색상 변경
-    function dark() {
-        if ($page2.hasClass('active') && $body.hasClass('dark') != true) {
-            $body.addClass('dark');
-            console.log('darkon');
-        } else if ($page2.hasClass('active') == false && $body.hasClass('dark')) {
-            $body.removeClass('dark');
-        }
-    }
-    $lang = $('.language');
-    $lang_list = $('.lang-list');
     $lang.click(function () {
         $lang.toggleClass('lang-active');
         if ($lang.hasClass('lang-active') == false) {
@@ -117,7 +103,4 @@ $(document).ready(function () {
             clickable: true,
         },
     });
-
-    dark();
-    gotop();
 });
