@@ -61,7 +61,7 @@ body {
 /* 풀페이지 네비게이션 */
 #fp-nav {
     margin-top: -148px !important;
-    z-index: 9999;
+    z-index: 999;
 }
 
 #fp-nav.right {
@@ -72,9 +72,11 @@ body {
 
     margin-bottom: 42px;
 }
+
 #fp-nav ul li:last-child {
     display: none;
 }
+
 #fp-nav ul li a span {
     left: 0;
     top: 0;
@@ -294,7 +296,6 @@ body {
     text-transform: uppercase;
     color: #fff;
     font-size: 11px;
-    border: 0;
     background-color: transparent;
 }
 
@@ -311,6 +312,126 @@ body {
     width: 30px;
     margin-left: 6px;
 }
+
+
+/* 전체메뉴 */
+.nav-bg {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: -760px;
+    display: block;
+    width: 760px;
+    height: 100%;
+    z-index: 9999;
+    overflow-y: auto;
+    transition: .3s;
+}
+
+.nav-on {
+    right: 0;
+}
+
+.nav-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.nav-top {
+    position: relative;
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d51c29;
+}
+
+
+
+.nav-close {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: block;
+    border: 0;
+    background-color: transparent;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.nav-close:hover {
+    transform: rotate(180deg);
+}
+
+.gnb {
+    position: relative;
+    display: block;
+}
+
+.gnb>li {
+    padding:30px 20px;
+    border-bottom: 1px solid #ddd;
+}
+.gnb>li>span {
+    position: relative;
+    display: block;
+    color: #000;
+    font-family: "Montserrat", "Noto Sans KR";
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+.gnb>li>span::before {
+    content: '';
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    display: block;
+    width: 40px;
+    opacity: 0;
+    height: 2px;
+    background-color: #d51c29;
+    transition: .3s;
+}
+.gnb>li:hover>span::before {
+    opacity: 1;
+}
+.sub {
+    position: relative;
+    display: block;
+}
+
+.sub li {
+    position: relative;
+    display: inline-block;
+}
+.sub li + li{
+    margin-left: 20px;
+}
+
+.sub li a {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #888;
+}
+.sub li:hover a {
+    color: #d51c29;
+}
+
 
 /* contents */
 #fullpage {}
@@ -976,6 +1097,8 @@ body::after {
     width: 45%;
 }
 
+.customer-box {}
+
 .customer-box+.customer-box {
     margin-top: 100px;
 }
@@ -1039,6 +1162,7 @@ body::after {
     display: inline-block;
     padding: 0 35px;
 }
+
 .footer {
     padding: 50px 0;
     text-align: center;
@@ -1047,10 +1171,12 @@ body::after {
     letter-spacing: -0.2px;
     color: #8e8e8e;
 }
+
 .footer-logo {
     position: relative;
     display: inline-block;
 }
+
 .private {
     position: relative;
     display: block;
@@ -1059,12 +1185,14 @@ body::after {
     letter-spacing: -0.2px;
     color: #8e8e8e;
 }
+
 .address {
     position: relative;
     display: block;
     margin-top: 15px;
 }
-.address span + span::before {
+
+.address span+span::before {
     content: "";
     display: inline-block;
     width: 1px;
@@ -1072,6 +1200,7 @@ body::after {
     background: #8e8e8e;
     margin: 0 8px;
 }
+
 .copy {
     position: relative;
     display: block;
