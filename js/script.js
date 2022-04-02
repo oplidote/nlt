@@ -30,7 +30,9 @@ $(document).ready(function () {
             // 고탑 기능
             $gotop.toggleClass('gotop-on', index != 1);
             // 섹션 2 : 헤더 색상 변경
-            $body.toggleClass('dark', index == 2);
+            if($(window).width() >= 1280){
+                $body.toggleClass('dark', index == 2);
+            }
         },
         afterLoad: function (anchorLink, index) {
             this.addClass('page'+ index +'-active');
