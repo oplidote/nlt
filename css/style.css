@@ -814,6 +814,8 @@ body::after {
 }
 
 .page3 .slide-txt span {
+    position: relative;
+    display: block;
     font-family: "Montserrat";
     font-size: 18px;
     font-weight: 400;
@@ -833,13 +835,12 @@ body::after {
     word-break: keep-all;
 }
 
-.page3 .slide-txt h2::after {
-    content: '';
-    position: absolute;
+.line {
+    position: relative;
     display: block;
     width: 100px;
     height: 4px;
-    bottom: 25px;
+    margin: 25px 0 !important;
     background-color: #d51c29;
 }
 
@@ -981,7 +982,11 @@ body::after {
     height: 60px;
     background-color: #fff;
 }
-
+.rnd-box img {
+    object-fit: contain;
+    width: 70px;
+    height: auto;
+}
 .rnd-box .txt {
     margin-top: 60px;
 }
@@ -1339,7 +1344,7 @@ body::after {
     }
 
     .br-pc {
-        display: none;
+        display: none !important;
     }
 
     .br-tb {
@@ -1416,17 +1421,20 @@ body::after {
         word-break: keep-all;
     }
 
-
+    .page3-swiper {
+        padding-top: 80px;
+        margin: 0 7%;
+    }
     .page3 .slide-img {
         width: 60%;
         position: relative;
-        margin-top: -20%;
+        overflow: hidden;
+        margin-top: -17%;
     }
 
     .page3 .slide-img img {
-        width: auto;
-        height: auto;
         display: block;
+        margin-top: -7%;
     }
 
     .page3 .slide-txt {
@@ -1436,11 +1444,47 @@ body::after {
     .page3 .slide-txt span {
         font-size: 18px;
         letter-spacing: 0.1px;
-        margin-bottom: 10px;
     }
 
     .page3 .slide-txt h2 {
         font-size: 34px;
         height: 100px;
+    }
+    .page3 .slide-control {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+        margin-top: 0;
+    }
+    .page4 .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 3%;
+    }
+    .page4 .left {
+        width: 100%;
+    }
+    .page4 .left .txt {
+        margin-bottom: 50px;
+    }
+    
+    .page4 .right {
+        flex-direction: column;
+    }
+    .rnd-box {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .rnd-box::before {
+        display: none;
+    }
+    .rnd-box .txt {
+        margin-top: 0;
+        padding-left: 40px;
+        flex-grow: 1;
+    }
+    .rnd-box p {
+        margin-bottom: 0;
     }
 }
