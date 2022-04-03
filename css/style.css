@@ -1026,7 +1026,6 @@ body::after {
 .page5-swiper {
     overflow: hidden;
 }
-
 .cap1::before {
     content: '';
     position: absolute;
@@ -1475,6 +1474,7 @@ body::after {
     .rnd-box {
         display: flex;
         margin-bottom: 30px;
+        padding-left: 25px;
     }
     .rnd-box::before {
         display: none;
@@ -1486,5 +1486,63 @@ body::after {
     }
     .rnd-box p {
         margin-bottom: 0;
+    }
+    .page5 .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 3%;
+    }
+    .cap1::before {
+        width:100%;
+        height: 40%;
+    }
+    .cap1::after {
+        width: 100%;
+        height: 20%;
+        top: 40vh;
+        bottom: auto;
+    }
+    .cap2::before {
+        width:100%;
+        height: 20%;
+        top: 60vh;
+    }
+    .cap2::after {
+        width: 100%;
+        height: 20%;
+        top: 80vh;
+    }
+    .page5 .left {
+        width: 100%;
+        margin-top: 10%;
+        padding-bottom: 3%;
+    }
+    .page5 .tit {
+        font-size: 30px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .page5 .right {
+        padding-left: 0;
+        width: 100%;
+    }
+    .customer-box {
+        margin-top: 0 !important;
+        height: 20vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .customer-box p {
+    }
+    .customer-img {
+        top: 50%;
+    }
+    .page5-pg {
+        top: 30px;
+    }
+    .partner .tit {
+        display: none;
     }
 }
