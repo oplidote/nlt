@@ -187,9 +187,11 @@ body {
     opacity: 0;
     transition: .3s;
 }
-.gotop img{
+
+.gotop img {
     width: 100%;
-} 
+}
+
 .gotop-on {
     visibility: visible;
     opacity: 1;
@@ -210,6 +212,7 @@ body {
     display: block;
     float: left;
 }
+
 .logo img {
     width: 100%;
 }
@@ -988,11 +991,13 @@ body::after {
     height: 60px;
     background-color: #fff;
 }
+
 .rnd-box img {
     object-fit: contain;
     width: 70px;
     height: auto;
 }
+
 .rnd-box .txt {
     margin-top: 60px;
 }
@@ -1032,6 +1037,7 @@ body::after {
 .page5-swiper {
     overflow: hidden;
 }
+
 .cap1::before {
     content: '';
     position: absolute;
@@ -1430,6 +1436,7 @@ body::after {
         padding-top: 80px;
         margin: 0 7%;
     }
+
     .page3 .slide-img {
         width: 60%;
         position: relative;
@@ -1455,6 +1462,7 @@ body::after {
         font-size: 34px;
         height: 100px;
     }
+
     .page3 .slide-control {
         position: absolute;
         left: 50%;
@@ -1462,62 +1470,75 @@ body::after {
         bottom: -50px;
         margin-top: 0;
     }
+
     .page4 .container {
         display: flex;
         flex-direction: column;
         padding: 0 3%;
     }
+
     .page4 .left {
         width: 100%;
     }
+
     .page4 .left .txt {
         margin-bottom: 50px;
     }
-    
+
     .page4 .right {
         flex-direction: column;
     }
+
     .rnd-box {
         display: flex;
         margin-bottom: 30px;
         padding-left: 25px;
     }
+
     .rnd-box::before {
         display: none;
     }
+
     .rnd-box .txt {
         margin-top: 0;
         padding-left: 40px;
         flex-grow: 1;
     }
+
     .rnd-box p {
         margin-bottom: 0;
     }
+
     .page5 .container {
         display: flex;
         flex-direction: column;
         padding: 0 3%;
     }
+
     .cap1::before {
-        width:100%;
+        width: 100%;
         height: 40%;
     }
+
     .cap1::after {
         width: 100%;
         height: 20%;
         top: 40vh;
         bottom: auto;
     }
+
     .cap2::before {
-        width:100%;
+        width: 100%;
         height: 20%;
         top: 60vh;
     }
+
     .cap2::after {
         width: 100%;
         height: 20%;
         top: 80vh;
     }
+
     .page5 .left {
         display: flex;
         width: 100%;
@@ -1525,15 +1546,18 @@ body::after {
         flex-direction: column;
         justify-content: end;
     }
+
     .page5 .tit {
         font-size: 30px;
         margin-bottom: 20px;
         display: block;
     }
+
     .page5 .right {
         padding-left: 0;
         width: 100%;
     }
+
     .customer-box {
         margin-top: 0 !important;
         height: 20vh;
@@ -1542,18 +1566,22 @@ body::after {
         flex-direction: column;
         justify-content: center;
     }
-    .customer-box p {
-    }
+
+    .customer-box p {}
+
     .customer-img {
         top: 50%;
     }
+
     .page5-pg {
         top: 30px;
     }
+
     .partner .tit {
         display: none;
     }
 }
+
 @media screen and (max-width: 767px) {
     .gotop {
         right: 4%;
@@ -1561,61 +1589,303 @@ body::after {
         width: 40px;
         height: 40px;
     }
+
     .header {
         padding-top: 25px;
     }
+
     .logo {
         width: 77px;
     }
-    .contact, .language {
+
+    .contact,
+    .language {
         display: none;
     }
+
     .visual-tit {
         font-size: 40px;
     }
+
     .visual-sub {
         font-size: 15px;
     }
+
     .left .tit {
         font-size: 13px;
         margin-bottom: 10px;
     }
+
     .left .sub {
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 10px;
     }
+
     .page2::before {
         height: 55vh;
     }
+
     .page2 .container {
         padding: 5% 5% 0;
     }
+
     .page2 .left {
         margin-bottom: 35px;
     }
-    .page2 .left .txt{
+
+    .page2 .left .txt {
         display: none;
     }
-    
-    .page2 .more{
+
+    .page2 .more {
         width: 140px;
         line-height: 32px;
         font-size: 9px;
     }
+
     .right-list {
         flex-wrap: wrap;
     }
+
     .list-box {
         width: 48%;
         margin-bottom: 2%;
     }
+
     .page2 .right .txt {
         display: none;
     }
+
     .page2 .right .tit {
         font-size: 16px;
         margin-bottom: 0;
         line-height: 1.5em;
+    }
+
+    .page3 .container {
+        padding: 0 5%;
+    }
+
+    .page3-swiper {
+        padding: 0 7%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .page3 .slide-box {
+        margin: 0 5px;
+        padding: 0;
+    }
+
+    .page3 .slide-img {
+        width: 100%;
+        float: none;
+        margin-top: 0;
+    }
+
+    .page3 .slide-img img {
+        margin: 0;
+    }
+
+    .page3 .slide-img::after {
+        content: none;
+    }
+
+    .page3 .slide-txt {
+        padding: 0;
+        float: none;
+        width: 100%;
+        padding: 20px 25px 15px;
+    }
+
+    .page3 .slide-txt span {
+        font-size: 13px;
+    }
+
+    .page3 .slide-txt h2 {
+        font-size: 23px;
+        height: auto;
+    }
+
+    .line {
+        width: 40px;
+        height: 2px;
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .page3 .slide-txt p {
+        display: none;
+    }
+
+    .page3 .slide-bt {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+    }
+
+    .page3 .slide-control {
+        bottom: -35px;
+    }
+
+    .page3-pg {
+        font-size: 13px;
+        bottom: 3px;
+    }
+
+    .page4 .left .sub {
+        margin-bottom: 35px;
+    }
+
+    .page4 .container {
+        padding: 5% 5% 0;
+    }
+
+    .rnd-box {
+        padding-left: 15px;
+    }
+
+    .rnd-box .txt {
+        padding-left: 20px;
+    }
+
+    .page4 .left .txt,
+    .rnd-box p {
+        display: none;
+    }
+
+    .rnd-box img {
+        width: 46px;
+    }
+
+    .rnd-box h2 {
+        font-size: 17px;
+    }
+
+    .rnd-box-bt {
+        width: 35px;
+        height: 35px;
+        background-size: contain;
+    }
+
+    .rnd-box::after {
+        width: 2px;
+        height: 36px;
+    }
+
+
+    .page5 {
+        background-color: #ddd;
+    }
+    .page5 .container {
+        padding: 0 5%;
+    }
+    .cap1 {
+        display: none;
+    }
+
+    .cap2 {
+        display: none;
+    }
+    .page5 .left {
+        padding-top: 60px;
+        height: auto;
+    }
+    .page5-swiper {
+        padding: 0 20% 0 0 !important
+    }
+    .page5-pg {
+        top: 60px;
+    }
+    .page5 .slidebox {
+        padding: 25px 35px;
+    }
+
+    .page5 .slide-tit {
+        font-size: 16px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+    }
+    .page5 .slide-box p {
+        font-size: 13px;
+        line-height: 18px;
+        height: 54px;
+        margin-bottom: 5px;
+    }
+    .date {
+        font-size: 13px;
+    }
+    .page5 .more {
+        width: 35px;
+        height: 35px;
+    }
+    .page5 .tit {
+        margin: 0;
+        font-size: 19px;
+        color: #3c3c3c;
+    }
+    .customer-box {
+        height: auto;
+        padding: 25px 0;
+    }
+    .customer-box + .customer-box {
+        border-top: 1px solid #b9b9b9;
+    }
+    .customer-box .tit::after {
+        position: relative;
+        margin: 7px 0;
+        width: 15px;
+    }
+
+    .customer-box p {
+        font-size: 13px;
+        line-height: 18px;
+        color: rgba(102,102,102,0.75);
+    }
+    .m-customer-img {
+        width: 32px;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        display: block;
+    }
+    .customer-img {
+        display: none;
+    }
+    .footer-logo {
+        width: 68px;
+    }
+    .footer-logo img{
+        width: 100%;
+    }
+    .footer {
+        padding: 25px 0;
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+    .private {
+        margin-top: 15px;
+    }
+    .address {
+        margin-top: 10px;
+    }
+    .tel {
+        display: block;
+    }
+    .tel::before {
+        content: none !important;
+    }
+    .copy {
+        margin-top: 5px;
     }
 }
