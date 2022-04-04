@@ -187,7 +187,9 @@ body {
     opacity: 0;
     transition: .3s;
 }
-
+.gotop img{
+    width: 100%;
+} 
 .gotop-on {
     visibility: visible;
     opacity: 1;
@@ -207,6 +209,9 @@ body {
     position: relative;
     display: block;
     float: left;
+}
+.logo img {
+    width: 100%;
 }
 
 .userarea {
@@ -506,9 +511,9 @@ body::after {
     display: block;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
     bottom: 60%;
     text-align: center;
-    white-space: nowrap;
 }
 
 .visual-tit {
@@ -520,6 +525,7 @@ body::after {
     font-weight: bold;
     letter-spacing: -0.25px;
     color: #fff;
+    word-break: keep-all;
     opacity: 0;
     transform: translateY(20%);
 }
@@ -1513,9 +1519,11 @@ body::after {
         top: 80vh;
     }
     .page5 .left {
+        display: flex;
         width: 100%;
-        margin-top: 10%;
-        padding-bottom: 3%;
+        height: 60vh;
+        flex-direction: column;
+        justify-content: end;
     }
     .page5 .tit {
         font-size: 30px;
@@ -1544,5 +1552,70 @@ body::after {
     }
     .partner .tit {
         display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .gotop {
+        right: 4%;
+        bottom: 4%;
+        width: 40px;
+        height: 40px;
+    }
+    .header {
+        padding-top: 25px;
+    }
+    .logo {
+        width: 77px;
+    }
+    .contact, .language {
+        display: none;
+    }
+    .visual-tit {
+        font-size: 40px;
+    }
+    .visual-sub {
+        font-size: 15px;
+    }
+    .left .tit {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    .left .sub {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 10px;
+    }
+    .page2::before {
+        height: 55vh;
+    }
+    .page2 .container {
+        padding: 5% 5% 0;
+    }
+    .page2 .left {
+        margin-bottom: 35px;
+    }
+    .page2 .left .txt{
+        display: none;
+    }
+    
+    .page2 .more{
+        width: 140px;
+        line-height: 32px;
+        font-size: 9px;
+    }
+    .right-list {
+        flex-wrap: wrap;
+    }
+    .list-box {
+        width: 48%;
+        margin-bottom: 2%;
+    }
+    .page2 .right .txt {
+        display: none;
+    }
+    .page2 .right .tit {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 1.5em;
     }
 }
