@@ -5,6 +5,7 @@ $(document).ready(function () {
     let $nav = $('.nav');
     let $nav_wrap = $('.nav-wrap');
     let $nav_close = $('.nav-close');
+    let $m_nav_close = $('.m-nav-close');
     let $menu = $('.menu');
     // 페이지
     let $body = $('body');
@@ -30,12 +31,12 @@ $(document).ready(function () {
             // 고탑 기능
             $gotop.toggleClass('gotop-on', index != 1);
             // 섹션 2 : 헤더 색상 변경
-            if($(window).width() >= 1280){
+            if ($(window).width() >= 1280) {
                 $body.toggleClass('dark', index == 2);
             }
         },
         afterLoad: function (anchorLink, index) {
-            this.addClass('page'+ index +'-active');
+            this.addClass('page' + index + '-active');
         }
     });
 
@@ -51,6 +52,11 @@ $(document).ready(function () {
     });
 
     $nav_close.click(function () {
+        $nav.removeClass('nav-on');
+        $nav_bg.stop().fadeOut(300);
+        $('body').off('scroll touchmove mousewheel');
+    });
+    $m_nav_close.click(function () {
         $nav.removeClass('nav-on');
         $nav_bg.stop().fadeOut(300);
         $('body').off('scroll touchmove mousewheel');
@@ -87,22 +93,50 @@ $(document).ready(function () {
     });
     let page3_swiper = new Swiper(".page3-swiper", {
         loop: true,
+        slidesPerView: 1,
         pagination: {
             el: ".page3-pg",
             type: "fraction"
         },
         loopAdditionalSlides: 5,
-
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+            }
+        },
         navigation: {
             nextEl: ".page3-next",
             prevEl: ".page3-prev"
         }
     });
     let page5_swiper = new Swiper(".page5-swiper", {
-        slidesPerView: 3,
+        slidesPerView: 1,
+        loop:true,
+        autoplay:{
+            delay:3000,
+        },
+        loopAdditionalSlides: 5,
         pagination: {
             el: ".page5-pg",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            }
+        }
+    });
+    var page6_swiper = new Swiper(".page6-swiper", {
+        slidesPerView: 4,
+        navigation: {
+            nextEl: ".page6-slide-next",
+            prevEl: ".page6-slide-prev",
+        },
+        loop:true,
+        breakpoints: {
+            768: {
+                slidesPerView: 7,
+            }
+        }
     });
 });
