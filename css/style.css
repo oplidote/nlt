@@ -34,7 +34,144 @@ body {
     letter-spacing: -0.25px;
     font-family: 'Noto Sans KR', sans-serif;
 }
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
 
+.modal-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: 350px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden;
+}
+.caution {
+    margin-top: 20px;
+    width: 80px;
+}
+.modal-wrap b {
+    position: relative;
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.modal-wrap strong {
+    color: #d51c29;
+}
+
+.modal-close {
+    position: absolute;
+    display: block;
+    top: 25px;
+    right: 25px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: rotate(45deg);
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s .5s;
+}
+.comment-on .modal-close {
+    transition: opacity .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-close:hover {
+    transform: rotate(225deg);
+}
+
+.modal-close::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #999;
+}
+
+.modal-close::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #999;
+}
+
+.modal-comment {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    background-color: #d51c29;
+    transition: .5s .3s;
+}
+.comment-on .modal-comment {
+    height: 100%;
+    transition: .5s;
+}
+.comment-bt {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 17px;
+}
+.comment-box {
+    position: relative;
+    display: block;
+    
+    padding-top: 10px;
+}
+.comment-box p{
+    position: relative;
+    display: block;
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 40px;
+    opacity: 0;
+    color:#fff;
+    transition: opacity .3s;
+}
+.comment-on .comment-box p{
+    margin-top: 0;
+    opacity: 1;
+    transition: opacity .3s .5s;
+}
 /* 공통요소 */
 .clearfix::after {
     content: '';

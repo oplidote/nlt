@@ -1,4 +1,22 @@
 $(document).ready(function () {
+    // 모달창
+    let $modal = $('.modal');
+    let $modal_close = $('.modal-close');
+    let $comment_bt = $('.comment-bt');
+    $modal_close.click(function () {
+        $('html').css('overflow-y', 'auto');
+        $modal.fadeOut(300);
+    });
+    $comment_bt.click(function () {
+
+        $(this).hide();
+        $(this).text('닫기').show(300);
+        if ($modal.hasClass('comment-on')) {
+            $(this).hide();
+            $(this).text('리뷰 및 개선사항').show(300);
+        }
+        $modal.toggleClass('comment-on');
+    });
     // --------변수 선언-------------
     // 전체메뉴
     let $nav_bg = $('.nav-bg');
@@ -111,9 +129,9 @@ $(document).ready(function () {
     });
     let page5_swiper = new Swiper(".page5-swiper", {
         slidesPerView: 1,
-        loop:true,
-        autoplay:{
-            delay:3000,
+        loop: true,
+        autoplay: {
+            delay: 3000,
         },
         loopAdditionalSlides: 5,
         pagination: {
@@ -132,7 +150,7 @@ $(document).ready(function () {
             nextEl: ".page6-slide-next",
             prevEl: ".page6-slide-prev",
         },
-        loop:true,
+        loop: true,
         breakpoints: {
             768: {
                 slidesPerView: 7,
